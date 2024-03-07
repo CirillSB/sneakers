@@ -1,0 +1,29 @@
+.cart {
+  position: relative;
+  // padding-right: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.cart__field {
+  margin-left: sz(10px);
+  width: sz(20px);
+  height: sz(19px);
+}
+
+.cart__contents {
+  position: absolute;
+  right: -10%;
+  bottom: -25%;
+  width: sz(16px);
+  height: sz(17px);
+  border-radius: 50%;
+  background-color: $color-carnation;
+  text-align: center;
+  font-family: $ff-default;
+  // font-size: sz(14px);
+  // line-height: sz(17px);
+  font-size: 14px;
+  line-height: 17px;
+}

@@ -1,0 +1,26 @@
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Intro-Book";
+
+  font-display: swap;
+  src: url("../fonts/Intro-Book.woff2") format("woff2"), url("../fonts/Intro-Book.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "Intro";
+
+  font-display: swap;
+  src: url("../fonts/Intro-Regular.woff2") format("woff2"), url("../fonts/Intro-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Intro";
+
+  font-display: swap;
+  src: url("../fonts/Intro-Bold.woff2") format("woff2"), url("../fonts/Intro-Bold.woff") format("woff");
+}

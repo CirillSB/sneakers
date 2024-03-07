@@ -1,0 +1,136 @@
+.filter {}
+
+.filter__title {
+  margin: 0 0 sz(20px) 0;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 24px;
+}
+
+.filter__subtitle {
+  margin: 0 0 sz(10px) 0;
+  // font-family: $ff-default;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.filter__price {
+  margin: 0 0 sz(10px) 0;
+}
+
+.filter__price-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
+  border-top: sz(1px) solid $color-bombay;
+  border-left: sz(1px) solid $color-bombay;
+  border-right: sz(1px) solid $color-bombay;
+  border-radius: sz(4px);
+  padding: sz(15px) 0;
+  margin-bottom: sz(25px);
+
+  // &::before {
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%);
+  //   content: "";
+  //   width: sz(1px);
+  //   height: sz(34px);
+  //   background-color: $color-bombay;
+  // }
+
+  // &::after {
+  //   position: absolute;
+  //   bottom: 0;
+  //   left: 50%;
+  //   transform: translateX(-50%);
+  //   content: "";
+  //   width: calc(100% - sz(2px));
+  //   height: sz(2px);
+  //   background-color: $color-river-bed;
+  //   z-index: 50;
+  // }
+}
+
+.filter__price-value {
+  width: 100%;
+  border: none;
+  font-family: $ff-default;
+  font-size: 16px;
+  line-height: 16px;
+  text-align: center;
+
+  &--min {}
+
+  &--max {}
+}
+
+.filter__price-slider {
+  position: absolute;
+  bottom: 0;
+  transform: translateY(50%);
+  padding: 0;
+  width: sz(5px);
+  height: sz(20px);
+  border: sz(1px) solid $color-seashell-peach;
+  cursor: pointer;
+  border-radius: sz(4px);
+  background-color: $color-river-bed;
+  z-index: 100;
+
+  &--min {
+    left: 0;
+  }
+
+  &--max {
+    right: 0;
+  }
+}
+
+.filter__range {}
+
+.filter__gender {}
+
+.filter__genders-wrapper {
+  margin-bottom: sz(25px);
+}
+
+.filter__gender-button {
+  appearance: none;
+  position: relative;
+  padding-left: sz(35px);
+  font-family: $ff-default;
+  font-size: 16px;
+  line-height: 16px;
+
+  &::before {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    // top: 0;
+    transform: translateY(-50%);
+    width: sz(24px);
+    height: sz(24px);
+    border-radius: sz(4px);
+    border: sz(1px) solid $color-cameo;
+  }
+}
+
+.filter__gender-label {}
+
+.filter__size {}
+
+.filter__size-list {}
+
+.filter__size-item {}
+
+.filter__size-btn {}
+
+.filter__size-number {}
+
+.filter__submit-btn {}
+
+.filter__reset-btn {}

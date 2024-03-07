@@ -1,0 +1,21 @@
+.catalog {
+	padding: sz(60px) 0;
+}
+.catalog__content {
+	display: grid;
+	grid-template-columns: sz(280px) 1fr;
+	grid-template-rows: auto;
+	grid-column-gap: sz(20px);
+
+}
+.catalog__filter {
+	padding: sz(20px);
+}
+.catalog__assortment {
+}
+.catalog__item {
+}
+.catalog__btn-wrapper {
+}
+.catalog__btn {
+}

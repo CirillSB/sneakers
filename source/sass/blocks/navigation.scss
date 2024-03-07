@@ -1,0 +1,52 @@
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: sz(27px) 0 sz(22px);
+  border-bottom: sz(1px) solid $color-default-white;
+}
+
+.navigation__logo {
+  font-family: $ff-intro;
+  font-weight: 700;
+  // font-size: sz(30px);
+  // line-height: sz(30px);
+  font-size: 30px;
+  line-height: 30px;
+  color: $color-default-white;
+
+}
+
+.navigation__list {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.navigation__item {
+  &:not(:last-child) {
+    margin-right: sz(40px);
+  }
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.navigation__link {
+  font-family: $ff-default;
+  // font-size: sz(14px);
+  font-weight: 400;
+  // line-height: sz(14px);
+  font-size: 14px;
+  line-height: 14px;
+  color: $color-default-white;
+}
+
+.menu-button {}
+
+.visually-hidden {}

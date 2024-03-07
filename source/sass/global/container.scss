@@ -1,0 +1,22 @@
+.container {
+  width: calc(1180 / 1920 * 100%);
+  min-width: 1180px;
+  max-width: 2160px;
+  margin: 0 auto;
+
+  @include vp-1439 {
+    // padding: 0 32px;
+  }
+
+  @include vp-1023 {
+    // padding: 0 24px;
+  }
+
+  @include vp-767 {
+    // padding: 0 16px;
+  }
+
+  @include mobile {
+    width: calc(300 / 320 * 100%);
+  }
+}

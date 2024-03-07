@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Описание проекта">
+  <title>SneakMax</title>
+  <link rel="stylesheet" href="css/style.min.css">
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <header class="main-header">
+      <div class="container">
+        <nav class="navigation">
+          <a class="navigation__logo" href="#">
+            SneakMax
+          </a>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                Каталог
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                О нас
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                Подбор товара
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                Наша команда
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                Доставка и оплата
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                Контакты
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link cart" href="#">
+                  Корзина
+                <svg class="cart__field" width="20" height="19">
+                  <use xlink:href="img/sprite.svg#cart"></use>
+                </svg>
+                <span class="cart__contents visually-hidden"></span>
+              </a>
+            </li>
+          </ul>
+          <button class="menu-button visually-hidden">
+            <span class="visually-hidden">
+              Кнопка показать или скрыть меню
+            </span>
+          </button>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="promo">
+        <div class="container">
+          <h1 class="main-title">
+            Кроссовки известных брендов с&nbsp;доставкой по&nbsp;России и&nbsp;СНГ
+          </h1>
+          <p class="promo__description">
+            Мы&nbsp;продаем кроссовки брендов Nike, Adidas, Puma, Reebok, Converse и&nbsp;многие другие по&nbsp;низким ценам
+          </p>
+          <a class="promo__link" href="#">
+            Перейти к&nbsp;покупкам
+          </a>
+        </div>
+      </section>
+      <section class="catalog">
+        <div class="container">
+          <h2 class="title">
+            Каталог
+          </h2>
+          <div class="catalog__content">
+            <div class="catalog__filter filter">
+              <h3 class="filter__title">
+                Подбор по&nbsp;параметрам
+              </h3>
+              <p class="filter__subtitle">
+                Цена, руб
+              </p>
+               <div id="slider"></div>
+              <div class="filter__price-wrapper">
+                <input class="filter__price-value filter__price-value--min" type="number">
+                <input class="filter__price-value filter__price-value--max" type="number">
+<!--                 <button class="filter__price-slider filter__price-slider--min" type="button">
+                  <span class="visually-hidden">Кнопка слайдера выбора минимальной цены</span>
+                </button>
+                <button class="filter__price-slider filter__price-slider--max" type="button">
+                  <span class="visually-hidden">Кнопка слайдера выбора максимальной цены</span>
+                </button> -->
+              </div>
+              <!-- <span class="filter__range"></span> -->
+              <p class="filter__subtitle">
+                Пол
+              </p>
+              <div class="filter__genders-wrapper">
+                <input class="filter__gender-button" id="male" type="radio" name="gender">
+                <label class="filter__gender-label" for="male">
+                  мужской
+                </label>
+                <input class="filter__gender-button" id="female" type="radio" name="gender" checked>
+                <label class="filter__gender-label" for="female">
+                  женский
+                </label>
+              </div>
+              <p class="filter__subtitle">
+                Размер
+              </p>
+              <ul class="filter__size-list">
+                <li class="filter__size-item">
+                  <input class="filter__size-btn" id="size35" type="checkbox">
+                  <label class="filter__size-number" for="size35">
+                    35
+                  </label>
+                </li>
+                <li class="filter__size-item">
+                  <input class="filter__size-btn" id="size36" type="checkbox">
+                  <label class="filter__size-number" for="size36">
+                    36
+                  </label>
+                </li>
+                <li class="filter__size-item">
+                  <input class="filter__size-btn" id="size37" type="checkbox">
+                  <label class="filter__size-number" for="size37">
+                    37
+                  </label>
+                </li>
+                <li class="filter__size-item">
+                  <input class="filter__size-btn" id="size38" type="checkbox">
+                  <label class="filter__size-number" for="size38">
+                    38
+                  </label>
+                </li>
+                <li class="filter__size-item">
+                  <input class="filter__size-btn" id="size39" type="checkbox">
+                  <label class="filter__size-number" for="size39">
+                    39
+                  </label>
+                </li>
+                <li class="filter__size-item">
+                  <input class="filter__size-btn" id="size40" type="checkbox">
+                  <label class="filter__size-number" for="size40">
+                    40
+                  </label>
+                </li>
+                <li class="filter__size-item">
+                  <input class="filter__size-btn" type="checkbox">
+                  <label for="" class="filter__size-number">
+                    41
+                  </label>
+                </li>
+                <li class="filter__size-item">
+                  <input class="filter__size-btn" type="checkbox">
+                  <label for="" class="filter__size-number">
+                    42
+                  </label>
+                </li>
+                <li class="filter__size-item">
+                  <input class="filter__size-btn" type="checkbox">
+                  <label for="" class="filter__size-number">
+                    43
+                  </label>
+                </li>
+              </ul>
+              <button class="filter__submit-btn" type="button">
+                Применить
+              </button>
+              <button class="filter__reset-btn" type="button">
+                сбросить
+              </button>
+            </div>
+          </div>
+          <ul class="catalog__assortment">
+            <li class="catalog__item">
+              <section class="assortment-card">
+                <a class="assortment-card__link" href="#">
+                  <picture class="assortment-card__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.webp 1x, img/sneakers-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/sneakers-mobile@1x.webp 1x, img/sneakers-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.png 1x, img/sneakers-desktop@2x.png 2x">
+                    <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-mobile@1x.png" srcset="img/sneakers-mobile@2x.png 2x" width="280" height="293" alt="Кроссовки.">
+                  </picture>
+                  <noscript>
+                    <img src="img/sneakers-mobile@1x.png" width="280" height="293" alt="Кроссовки.">
+                  </noscript>
+                </a>
+                <h3 class="assortment-card__title">
+                  Кроссовки Nike Air Force 1 '07 QS
+                </h3>
+                <p class="assortment-card__price">
+                  11 000 р
+                </p>
+              </section>
+            </li>
+            <li class="catalog__item">
+              <section class="assortment-card">
+                <a class="assortment-card__link" href="#">
+                  <picture class="assortment-card__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.webp 1x, img/sneakers-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/sneakers-mobile@1x.webp 1x, img/sneakers-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.png 1x, img/sneakers-desktop@2x.png 2x">
+                    <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-mobile@1x.png" srcset="img/sneakers-mobile@2x.png 2x" width="280" height="293" alt="Кроссовки.">
+                  </picture>
+                  <noscript>
+                    <img src="img/sneakers-mobile@1x.png" width="280" height="293" alt="Кроссовки.">
+                  </noscript>
+                </a>
+                <h3 class="assortment-card__title">
+                  Кроссовки Nike Air Force 1 '07 QS
+                </h3>
+                <p class="assortment-card__price">
+                  11 000 р
+                </p>
+              </section>
+            </li>
+            <li class="catalog__item">
+              <section class="assortment-card">
+                <a class="assortment-card__link" href="#">
+                  <picture class="assortment-card__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.webp 1x, img/sneakers-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/sneakers-mobile@1x.webp 1x, img/sneakers-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.png 1x, img/sneakers-desktop@2x.png 2x">
+                    <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-mobile@1x.png" srcset="img/sneakers-mobile@2x.png 2x" width="280" height="293" alt="Кроссовки.">
+                  </picture>
+                  <noscript>
+                    <img src="img/sneakers-mobile@1x.png" width="280" height="293" alt="Кроссовки.">
+                  </noscript>
+                </a>
+                <h3 class="assortment-card__title">
+                  Кроссовки Nike Air Force 1 '07 QS
+                </h3>
+                <p class="assortment-card__price">
+                  11 000 р
+                </p>
+              </section>
+            </li>
+            <li class="catalog__item">
+              <section class="assortment-card">
+                <a class="assortment-card__link" href="#">
+                  <picture class="assortment-card__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.webp 1x, img/sneakers-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/sneakers-mobile@1x.webp 1x, img/sneakers-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.png 1x, img/sneakers-desktop@2x.png 2x">
+                    <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-mobile@1x.png" srcset="img/sneakers-mobile@2x.png 2x" width="280" height="293" alt="Кроссовки.">
+                  </picture>
+                  <noscript>
+                    <img src="img/sneakers-mobile@1x.png" width="280" height="293" alt="Кроссовки.">
+                  </noscript>
+                </a>
+                <h3 class="assortment-card__title">
+                  Кроссовки Nike Air Force 1 '07 QS
+                </h3>
+                <p class="assortment-card__price">
+                  11 000 р
+                </p>
+              </section>
+            </li>
+            <li class="catalog__item">
+              <section class="assortment-card">
+                <a class="assortment-card__link" href="#">
+                  <picture class="assortment-card__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.webp 1x, img/sneakers-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/sneakers-mobile@1x.webp 1x, img/sneakers-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.png 1x, img/sneakers-desktop@2x.png 2x">
+                    <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-mobile@1x.png" srcset="img/sneakers-mobile@2x.png 2x" width="280" height="293" alt="Кроссовки.">
+                  </picture>
+                  <noscript>
+                    <img src="img/sneakers-mobile@1x.png" width="280" height="293" alt="Кроссовки.">
+                  </noscript>
+                </a>
+                <h3 class="assortment-card__title">
+                  Кроссовки Nike Air Force 1 '07 QS
+                </h3>
+                <p class="assortment-card__price">
+                  11 000 р
+                </p>
+              </section>
+            </li>
+            <li class="catalog__item">
+              <section class="assortment-card">
+                <a class="assortment-card__link" href="#">
+                  <picture class="assortment-card__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.webp 1x, img/sneakers-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/sneakers-mobile@1x.webp 1x, img/sneakers-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.png 1x, img/sneakers-desktop@2x.png 2x">
+                    <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-mobile@1x.png" srcset="img/sneakers-mobile@2x.png 2x" width="280" height="293" alt="Кроссовки.">
+                  </picture>
+                  <noscript>
+                    <img src="img/sneakers-mobile@1x.png" width="280" height="293" alt="Кроссовки.">
+                  </noscript>
+                </a>
+                <h3 class="assortment-card__title">
+                  Кроссовки Nike Air Force 1 '07 QS
+                </h3>
+                <p class="assortment-card__price">
+                  11 000 р
+                </p>
+              </section>
+            </li>
+            <li class="catalog__item">
+              <section class="assortment-card">
+                <a class="assortment-card__link" href="#">
+                  <picture class="assortment-card__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.webp 1x, img/sneakers-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/sneakers-mobile@1x.webp 1x, img/sneakers-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.png 1x, img/sneakers-desktop@2x.png 2x">
+                    <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-mobile@1x.png" srcset="img/sneakers-mobile@2x.png 2x" width="280" height="293" alt="Кроссовки.">
+                  </picture>
+                  <noscript>
+                    <img src="img/sneakers-mobile@1x.png" width="280" height="293" alt="Кроссовки.">
+                  </noscript>
+                </a>
+                <h3 class="assortment-card__title">
+                  Кроссовки Nike Air Force 1 '07 QS
+                </h3>
+                <p class="assortment-card__price">
+                  11 000 р
+                </p>
+              </section>
+            </li>
+            <li class="catalog__item">
+              <section class="assortment-card">
+                <a class="assortment-card__link" href="#">
+                  <picture class="assortment-card__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.webp 1x, img/sneakers-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/sneakers-mobile@1x.webp 1x, img/sneakers-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.png 1x, img/sneakers-desktop@2x.png 2x">
+                    <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-mobile@1x.png" srcset="img/sneakers-mobile@2x.png 2x" width="280" height="293" alt="Кроссовки.">
+                  </picture>
+                  <noscript>
+                    <img src="img/sneakers-mobile@1x.png" width="280" height="293" alt="Кроссовки.">
+                  </noscript>
+                </a>
+                <h3 class="assortment-card__title">
+                  Кроссовки Nike Air Force 1 '07 QS
+                </h3>
+                <p class="assortment-card__price">
+                  11 000 р
+                </p>
+              </section>
+            </li>
+            <li class="catalog__item">
+              <section class="assortment-card">
+                <a class="assortment-card__link" href="#">
+                  <picture class="assortment-card__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.webp 1x, img/sneakers-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/sneakers-mobile@1x.webp 1x, img/sneakers-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/sneakers-desktop@1x.png 1x, img/sneakers-desktop@2x.png 2x">
+                    <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-mobile@1x.png" srcset="img/sneakers-mobile@2x.png 2x" width="280" height="293" alt="Кроссовки.">
+                  </picture>
+                  <noscript>
+                    <img src="img/sneakers-mobile@1x.png" width="280" height="293" alt="Кроссовки.">
+                  </noscript>
+                </a>
+                <h3 class="assortment-card__title">
+                  Кроссовки Nike Air Force 1 '07 QS
+                </h3>
+                <p class="assortment-card__price">
+                  11 000 р
+                </p>
+              </section>
+            </li>
+          </ul>
+          <div class="catalog__btn-wrapper">
+            <button class="catalog__btn">
+              Показать еще
+            </button>
+          </div>
+        </div>
+      </section>
+      <section class="about-us">
+        <div class="container">
+          <h2 class="about-us__title">
+            Пара слов о нас
+          </h2>
+          <blockquote class="about-us__quote">
+            Спорт держит нас в форме. Учит дисциплине. Объединяет нас. Через спорт мы можем менять жизни. В том числе с помощью воодушевляющих историй спортсменов. Чтобы помочь тебе подняться и двигаться вперед.
+          </blockquote>
+          <cite class="about-us__quote-author">
+            SneakMax
+          </cite>
+        </div>
+      </section>
+      <section class="perfect-pair">
+        <div class="container">
+          <h2 class="perfect-pair__title">
+            Мы подберем идеальную пару для вас
+          </h2>
+          <p class="perfect-pair__text">
+            Ответьте на три вопроса и мы вышлем каталог с самыми подходящими для вас моделями
+          </p>
+          <form class="perfect-pair__form selection-form" action="#" method="POST">
+            <div class="selection-form__inner selection-form__inner--first-step">
+              <h3 class="selection-form__title">
+                Какой тип кроссовок рассматриваете?
+              </h3>
+              <ul class="selection-form__type-list">
+                <li class="selection-form__type-item">
+                  <picture class="selection-form__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.webp 1x, img/sneakers-for-you-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/sneakers-for-you-mobile@1x.webp 1x, img/sneakers-for-you-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.png 1x, img/sneakers-for-you-desktop@2x.png 2x">
+                    <img class="selection-form__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-for-you-mobile@1x.png" srcset="img/sneakers-for-you-mobile@2x.png 2x" width="280" height="120" alt="Кроссовки.">
+                  </picture>
+                  <noscript>
+                    <img src="img/sneakers-for-you-mobile@1x.png" width="280" height="120" alt="Кроссовки.">
+                  </noscript>
+                  <input class="selection-form__checkbox" id="sneakers" type="checkbox">
+                  <label class="selection-form__label" for="sneakers">
+                    кеды
+                  </label>
+                </li>
+                <!--               <li class="selection-form__type-item">
+                <picture class="selection-form__picture">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.webp 1x, img/sneakers-for-you-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/sneakers-for-you-mobile@1x.webp 1x, img/sneakers-for-you-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.png 1x, img/sneakers-for-you-desktop@2x.png 2x">
+                  <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-for-you-mobile@1x.png" srcset="img/sneakers-for-you-mobile@2x.png 2x" width="280" height="120" alt="Кроссовки.">
+                </picture>
+                <noscript>
+                  <img src="img/sneakers-for-you-mobile@1x.png" width="280" height="120" alt="Кроссовки.">
+                </noscript>
+                <input class="selection-form__checkbox" id="sneakers" type="checkbox">
+                <label class="selection-form__label" for="sneakers">
+                  кеды
+                </label>
+              </li>
+              <li class="selection-form__type-item">
+                <picture class="selection-form__picture">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.webp 1x, img/sneakers-for-you-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/sneakers-for-you-mobile@1x.webp 1x, img/sneakers-for-you-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.png 1x, img/sneakers-for-you-desktop@2x.png 2x">
+                  <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-for-you-mobile@1x.png" srcset="img/sneakers-for-you-mobile@2x.png 2x" width="280" height="120" alt="Кроссовки.">
+                </picture>
+                <noscript>
+                  <img src="img/sneakers-for-you-mobile@1x.png" width="280" height="120" alt="Кроссовки.">
+                </noscript>
+                <input class="selection-form__checkbox" id="sneakers" type="checkbox">
+                <label class="selection-form__label" for="sneakers">
+                  кеды
+                </label>
+              </li>
+              <li class="selection-form__type-item">
+                <picture class="selection-form__picture">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.webp 1x, img/sneakers-for-you-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/sneakers-for-you-mobile@1x.webp 1x, img/sneakers-for-you-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.png 1x, img/sneakers-for-you-desktop@2x.png 2x">
+                  <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-for-you-mobile@1x.png" srcset="img/sneakers-for-you-mobile@2x.png 2x" width="280" height="120" alt="Кроссовки.">
+                </picture>
+                <noscript>
+                  <img src="img/sneakers-for-you-mobile@1x.png" width="280" height="120" alt="Кроссовки.">
+                </noscript>
+                <input class="selection-form__checkbox" id="sneakers" type="checkbox">
+                <label class="selection-form__label" for="sneakers">
+                  кеды
+                </label>
+              </li>
+              <li class="selection-form__type-item">
+                <picture class="selection-form__picture">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.webp 1x, img/sneakers-for-you-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/sneakers-for-you-mobile@1x.webp 1x, img/sneakers-for-you-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.png 1x, img/sneakers-for-you-desktop@2x.png 2x">
+                  <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-for-you-mobile@1x.png" srcset="img/sneakers-for-you-mobile@2x.png 2x" width="280" height="120" alt="Кроссовки.">
+                </picture>
+                <noscript>
+                  <img src="img/sneakers-for-you-mobile@1x.png" width="280" height="120" alt="Кроссовки.">
+                </noscript>
+                <input class="selection-form__checkbox" id="sneakers" type="checkbox">
+                <label class="selection-form__label" for="sneakers">
+                  кеды
+                </label>
+              </li>
+              <li class="selection-form__type-item">
+                <picture class="selection-form__picture">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.webp 1x, img/sneakers-for-you-desktop@2x.webp 2x">
+                  <source type="image/webp" srcset="img/sneakers-for-you-mobile@1x.webp 1x, img/sneakers-for-you-mobile@2x.webp 2x">
+                  <source media="(min-width: 768px)" srcset="img/sneakers-for-you-desktop@1x.png 1x, img/sneakers-for-you-desktop@2x.png 2x">
+                  <img class="assortment-card__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/sneakers-for-you-mobile@1x.png" srcset="img/sneakers-for-you-mobile@2x.png 2x" width="280" height="120" alt="Кроссовки.">
+                </picture>
+                <noscript>
+                  <img src="img/sneakers-for-you-mobile@1x.png" width="280" height="120" alt="Кроссовки.">
+                </noscript>
+                <input class="selection-form__checkbox" id="sneakers" type="checkbox">
+                <label class="selection-form__label" for="sneakers">
+                  кеды
+                </label>
+              </li> -->
+              </ul>
+            </div>
+            <div class="selection-form__inner selection-form__inner--second-step">
+              <h3 class="selection-form__title">
+                Какой размер вам подойдет?
+              </h3>
+              <ul class="selection-form__size-list">
+                <li class="selection-form__size-item">
+                  <input class="selection-form__size-select" id="size36" type="radio" name="sizes">
+                  <label class="selection-form__size-label" for="size36"></label>
+                </li>
+                <li class="selection-form__size-item">
+                  <input class="selection-form__size-select" id="size36-38" type="radio" name="sizes">
+                  <label class="selection-form__size-label" for="size36-38"></label>
+                </li>
+                <li class="selection-form__size-item">
+                  <input class="selection-form__size-select" id="size39-41" type="radio" name="sizes">
+                  <label class="selection-form__size-label" for="size39-41"></label>
+                </li>
+                <li class="selection-form__size-item">
+                  <input class="selection-form__size-select" id="size42-44" type="radio" name="sizes">
+                  <label class="selection-form__size-label" for="size42-44"></label>
+                </li>
+                <li class="selection-form__size-item">
+                  <input class="selection-form__size-select" id="size45" type="radio" name="sizes">
+                  <label class="selection-form__size-label" for="size45"></label>
+                </li>
+              </ul>
+              <picture class="perfect-pair__picture">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/size-desktop@1x.webp 1x, img/size-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/size-mobile@1x.webp 1x, img/size-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/size-desktop@1x.png 1x, img/size-desktop@2x.png 2x">
+                <img class="perfect-pair__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/size-mobile@1x.png" srcset="img/size-mobile@2x.png 2x" width="280" height="293" alt="Кроссовки.">
+              </picture>
+              <noscript>
+                <img src="img/size-mobile@1x.png" width="280" height="293" alt="Кроссовки.">
+              </noscript>
+            </div>
+            <div class="selection-form__inner selection-form__inner--third-step">
+              <h3 class="selection-form__title">
+                Уточните какие-либо моменты
+              </h3>
+              <textarea class="selection-form__textarea" name="additional-wishes" cols="30" rows="10" placeholder="Введите сообщение"></textarea>
+            </div>
+            <div class="selection-form__inner selection-form__inner--fifth-step">
+              <h3 class="selection-form__title">
+                Ваша подборка готова!
+              </h3>
+              <p class="selection-form__text">
+                Оставьте свои контактные данные, чтобы бы мы могли отправить подготовленный для вас каталог
+              </p>
+              <fieldset class="selection-form__fieldset">
+                <legend class="selection-form__legend">
+                  Получить предложение
+                </legend>
+                <p class="selection-form__text selection-form__text--last">
+                  Получите подборку подходящих для вас моделей на почту
+                </p>
+                <input class="selection-form__feedback" type="text" placeholder="Ваше имя">
+                <input class="selection-form__feedback" type="email" placeholder="E-mail">
+              </fieldset>
+              <button class="selection-form__submit">
+                Получить
+              </button>
+            </div>
+            <div class="selection-btn-wrapper">
+              <span class="selection-form__step-number">
+                2 из 3
+              </span>
+              <button class="selection-form__slide-button" type="button">
+                Следующий шаг
+              </button>
+            </div>
+          </form>
+        </div>
+      </section>
+      <section class="team">
+        <div class="container">
+          <h2>
+            Наша команда
+          </h2>
+          <ul class="team__list">
+            <li class="team__item">
+              <picture class="team__picture">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/jack-irwin1-desktop@1x.webp 1x, img/jack-irwin1-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/jack-irwin1-mobile@1x.webp 1x, img/jack-irwin1-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/jack-irwin1-desktop@1x.png 1x, img/jack-irwin1-desktop@2x.png 2x">
+                <img class="team__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/jack-irwin1-mobile@1x.png" srcset="img/jack-irwin1-mobile@2x.png 2x" width="387" height="462" alt="Максим Золотарев.">
+              </picture>
+              <noscript>
+                <img src="img/jack-irwin1-mobile@1x.png" width="387" height="462" alt="Максим Золотарев.">
+              </noscript>
+            </li>
+            <li class="team__item">
+              <picture class="team__picture">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/jack-irwin2-desktop@1x.webp 1x, img/jack-irwin2-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/jack-irwin2-mobile@1x.webp 1x, img/jack-irwin2-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/jack-irwin2-desktop@1x.png 1x, img/jack-irwin2-desktop@2x.png 2x">
+                <img class="team__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/jack-irwin2-mobile@1x.png" srcset="img/jack-irwin2-mobile@2x.png 2x" width="387" height="462" alt="Максим Золотарев.">
+              </picture>
+              <noscript>
+                <img src="img/jack-irwin2-mobile@1x.png" width="387" height="462" alt="Максим Золотарев.">
+              </noscript>
+            </li>
+            <li class="team__item">
+              <picture class="team__picture">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/jack-irwin3-desktop@1x.webp 1x, img/jack-irwin3-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/jack-irwin3-mobile@1x.webp 1x, img/jack-irwin3-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/jack-irwin3-desktop@1x.png 1x, img/jack-irwin3-desktop@2x.png 2x">
+                <img class="team__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/jack-irwin3-mobile@1x.png" srcset="img/jack-irwin3-mobile@2x.png 2x" width="387" height="462" alt="Максим Золотарев.">
+              </picture>
+              <noscript>
+                <img src="img/jack-irwin3-mobile@1x.png" width="387" height="462" alt="Максим Золотарев.">
+              </noscript>
+            </li>
+            <li class="team__item">
+              <picture class="team__picture">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/jack-irwin4-desktop@1x.webp 1x, img/jack-irwin4-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/jack-irwin4-mobile@1x.webp 1x, img/jack-irwin4-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/jack-irwin4-desktop@1x.png 1x, img/jack-irwin4-desktop@2x.png 2x">
+                <img class="team__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/jack-irwin4-mobile@1x.png" srcset="img/jack-irwin4-mobile@2x.png 2x" width="387" height="462" alt="Максим Золотарев.">
+              </picture>
+              <noscript>
+                <img src="img/jack-irwin4-mobile@1x.png" width="387" height="462" alt="Максим Золотарев.">
+              </noscript>
+            </li>
+            <li class="team__item">
+              <picture class="team__picture">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/jack-irwin5-desktop@1x.webp 1x, img/jack-irwin5-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/jack-irwin5-mobile@1x.webp 1x, img/jack-irwin5-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/jack-irwin5-desktop@1x.png 1x, img/jack-irwin5-desktop@2x.png 2x">
+                <img class="team__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/jack-irwin5-mobile@1x.png" srcset="img/jack-irwin5-mobile@2x.png 2x" width="387" height="462" alt="Максим Золотарев.">
+              </picture>
+              <noscript>
+                <img src="img/jack-irwin5-mobile@1x.png" width="387" height="462" alt="Максим Золотарев.">
+              </noscript>
+            </li>
+            <li class="team__item">
+              <picture class="team__picture">
+                <source type="image/webp" media="(min-width: 768px)" srcset="img/jack-irwin6-desktop@1x.webp 1x, img/jack-irwin6-desktop@2x.webp 2x">
+                <source type="image/webp" srcset="img/jack-irwin6-mobile@1x.webp 1x, img/jack-irwin6-mobile@2x.webp 2x">
+                <source media="(min-width: 768px)" srcset="img/jack-irwin6-desktop@1x.png 1x, img/jack-irwin6-desktop@2x.png 2x">
+                <img class="team__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/jack-irwin6-mobile@1x.png" srcset="img/jack-irwin6-mobile@2x.png 2x" width="387" height="462" alt="Максим Золотарев.">
+              </picture>
+              <noscript>
+                <img src="img/jack-irwin6-mobile@1x.png" width="387" height="462" alt="Максим Золотарев.">
+              </noscript>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="questions">
+        <div class="container">
+          <h2 class="title">
+            Часто задаваемые вопросы
+          </h2>
+          <ul class="questions__list">
+            <li class="questions__item">
+              <details>
+                <summary class="question">
+                  Вопрос 1
+                </summary>
+                <p class="question__text">
+                  А это ответ 1: в комплексе функционируют 6 детских садов с площадками, воспитателями и всякими другими людьми
+                </p>
+              </details>
+            </li>
+            <li class="questions__item">
+              <details>
+                <summary class="question">
+                  Вопрос 2
+                </summary>
+                <p class="question__text">
+                  А это ответ 2: в комплексе функционируют 6 детских садов с площадками, воспитателями и всякими другими людьми
+                </p>
+              </details>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="contacts" id="contacts">
+        <div class="container">
+          <h2 class="title">
+            Контакты
+          </h2>
+          <div class="contacts__address address">
+            <div class="address__inner">
+              <h3 class="address__title">
+                Главный офис
+              </h3>
+              <div class="tooltip">
+                <span class="tooltip__point"></span>
+                <p class="tooltip__text">
+                  Адрес и телефон для корреспонденции, инвесторов. Вопросы о доставке, качестве обслуживания и товара просьба задавать в отдел продаж
+                </p>
+              </div>
+              <a class="address__phone-link" href="tel:+78007898989">
+                +7 800 789 89 89
+              </a>
+              <address class="address__data">
+                г. Санкт-Петербург, Комсомольская, 43 к1
+              </address>
+            </div>
+            <div class="address__inner">
+              <h3 class="address__title">
+                отдел продаж
+              </h3>
+              <a class="address__phone-link" href="tel:+78007898989">
+                +7 800 789 89 89
+              </a>
+              <address class="address__data">
+                г. Санкт-Петербург, Комсомольская, 43 к1
+              </address>
+            </div>
+            <div class="address__inner">
+              <ul class="address__socials-list">
+                <li class="address__socials-item">
+                  <a class="address__socials-link" href="#">
+                    <span class="visually-hidden">
+                      Мы в вконтакте
+                    </span>
+                  </a>
+                </li>
+                <li class="address__socials-item">
+                  <a class="address__socials-link" href="#">
+                    <span class="visually-hidden">
+                      Мы в инстаграм
+                    </span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="contacts__map">
+            <div class="map lazy" id="map"></div>
+          </div>
+        </div>
+      </section>
+      <div class="callback-wrapper">
+        <form class="callback-form" action="#" method="POST">
+          <h2 class="callback-form__title">
+            Есть вопросы?
+          </h2>
+          <p>
+            Заполните форму и наш менеджер свяжется с вами
+          </p>
+          <input type="text" placeholder="Ваше имя">
+          <input type="tel" placeholder="Номер телефона">
+          <button type="submit">
+            Отправить
+          </button>
+        </form>
+        <section class="instagram">
+          <h2 class="instagram-title">
+            <span class="visually-hidden">
+              Фото в инсаграме
+            </span>
+            <svg width="157" height="56">
+              <use xlink:href="img/sprite.svg#instagram-logo"></use>
+            </svg>
+          </h2>
+          <ul class="instagram__list">
+            <li class="instagram__item">
+                  <picture class="instagram__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/inst1-desktop@1x.webp 1x, img/inst1-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/inst1-mobile@1x.webp 1x, img/inst1-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/inst1-desktop@1x.png 1x, img/inst1-desktop@2x.png 2x">
+                    <img class="instagram__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/inst1-mobile@1x.png" srcset="img/inst1-mobile@2x.png 2x" width="157" height="161" alt="Фото из инстаграма.">
+                  </picture>
+                  <noscript>
+                    <img src="img/inst1-mobile@1x.png" width="157" height="161" alt="Фото из инстаграма.">
+                  </noscript>
+            </li>
+            <li class="instagram__item">
+                  <picture class="instagram__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/inst2-desktop@1x.webp 1x, img/inst2-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/inst2-mobile@1x.webp 1x, img/inst2-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/inst2-desktop@1x.png 1x, img/inst2-desktop@2x.png 2x">
+                    <img class="instagram__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/inst2-mobile@1x.png" srcset="img/inst2-mobile@2x.png 2x" width="157" height="161" alt="Фото из инстаграма.">
+                  </picture>
+                  <noscript>
+                    <img src="img/inst2-mobile@1x.png" width="157" height="161" alt="Фото из инстаграма.">
+                  </noscript>              
+            </li>
+            <li class="instagram__item">
+                  <picture class="instagram__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/inst3-desktop@1x.webp 1x, img/inst3-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/inst1-mobile@1x.webp 1x, img/inst3-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/inst1-desktop@1x.png 1x, img/inst3-desktop@2x.png 2x">
+                    <img class="instagram__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/inst1-mobile@1x.png" srcset="img/inst3-mobile@2x.png 2x" width="157" height="161" alt="Фото из инстаграма.">
+                  </picture>
+                  <noscript>
+                    <img src="img/inst3-mobile@1x.png" width="157" height="161" alt="Фото из инстаграма.">
+                  </noscript>              
+            </li>
+            <li class="instagram__item">
+                  <picture class="instagram__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/inst4-desktop@1x.webp 1x, img/inst4-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/inst1-mobile@1x.webp 1x, img/inst4-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/inst1-desktop@1x.png 1x, img/inst4-desktop@2x.png 2x">
+                    <img class="instagram__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/inst1-mobile@1x.png" srcset="img/inst4-mobile@2x.png 2x" width="157" height="161" alt="Фото из инстаграма.">
+                  </picture>
+                  <noscript>
+                    <img src="img/inst4-mobile@1x.png" width="157" height="161" alt="Фото из инстаграма.">
+                  </noscript>              
+            </li>
+            <li class="instagram__item">
+                  <picture class="instagram__picture">
+                    <source type="image/webp" media="(min-width: 768px)" srcset="img/inst5-desktop@1x.webp 1x, img/inst5-desktop@2x.webp 2x">
+                    <source type="image/webp" srcset="img/inst1-mobile@1x.webp 1x, img/inst5-mobile@2x.webp 2x">
+                    <source media="(min-width: 768px)" srcset="img/inst1-desktop@1x.png 1x, img/inst5-desktop@2x.png 2x">
+                    <img class="instagram__image" loading="lazy" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAMAAAACCAQAAAA3fa6RAAAADklEQVR42mNkAANGCAUAACMAA2w/AMgAAAAASUVORK5CYII=" data-src="img/inst1-mobile@1x.png" srcset="img/inst5-mobile@2x.png 2x" width="157" height="161" alt="Фото из инстаграма.">
+                  </picture>
+                  <noscript>
+                    <img src="img/inst5-mobile@1x.png" width="157" height="161" alt="Фото из инстаграма.">
+                  </noscript>              
+            </li>
+          </ul>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+                <nav class="navigation">
+          <a class="navigation__logo" href="#">
+            SneakMax
+          </a>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                Каталог
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                О нас
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                Подбор товара
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                Наша команда
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                Доставка и оплата
+              </a>
+            </li>
+            <li class="navigation__item">
+              <a class="navigation__link" href="#">
+                Контакты
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </footer>
+  </div>
+  <!-- Модалки -->
+  <div class="modal modal--preload" data-modal="feedback">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Обычная модалка</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <div class="modal modal--preload modal--fit-content modal--no-scale" data-modal="success">
+    <div class="modal__wrapper">
+      <div class="modal__overlay" data-close-modal></div>
+      <div class="modal__content">
+        <p class="modal__description">Размер этой модалки зависит от ширины контента,<br> отключена анимация-скейл</p>
+        <button class="modal__close-btn btn-reset" type="button" aria-label="Закрыть попап" data-close-modal>
+          <svg width="15" height="15">
+            <use xlink:href="img/sprite.svg#icon-close"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- <script src="js/vendor/nouislider.min.js"></script> -->
+  <script src="js/vendor.min.js"></script>
+  
+  <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
